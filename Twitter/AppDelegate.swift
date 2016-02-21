@@ -21,7 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if User.currentUser != nil {
             print("Current user detected: \(User.currentUser?.name)")
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TweetsViewController") as UIViewController
+            let vc = storyboard.instantiateViewControllerWithIdentifier("modalNavigation") as! UINavigationController
+            
+            let navigationBarAppearance = UINavigationBar.appearance()
+            
+            navigationBarAppearance.tintColor = UIColor.whiteColor()
+            navigationBarAppearance.barTintColor = uiColorFromHex(0x75b5eb)
+            navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+            
+            
             window?.rootViewController = vc
         }
         
@@ -60,6 +68,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TwitterClient.sharedInstance.openURL(url)
         
         return true
+    }
+    
+    func uiColorFromHex(rgbValue:UInt32)->UIColor{
+        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
+        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
+        let blue = CGFloat(rgbValue & 0xFF)/256.0
+        
+        return UIColor(red:red, green:green, blue:blue, alpha:1.0)
     }
 
 

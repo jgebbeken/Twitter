@@ -21,14 +21,18 @@ class User: NSObject {
     var profileImageUrl: String?
     var tagline: String?
     var dictionary: NSDictionary
+    var stringCreatedAt: String?
+    var createdAt: NSDate?
     
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
-        profileImageUrl = dictionary["profile_image_url"] as? String
+        profileImageUrl = dictionary["profile_image_url_https"] as? String
         tagline = dictionary["description"] as? String
+        
+        
     }
     
     func logout() {
@@ -38,6 +42,7 @@ class User: NSObject {
         NSNotificationCenter.defaultCenter().postNotificationName(userDidLogoutNotification, object: nil)
         
     }
+    
     
     class var currentUser: User? {
         get {
