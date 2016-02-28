@@ -18,6 +18,9 @@
 		EE1ADBBE1C716FBD00367D5A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADBBD1C716FBD00367D5A /* Tweet.swift */; };
 		EE1ADBC01C71852000367D5A /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1ADBBF1C71852000367D5A /* TweetsViewController.swift */; };
 		EE4508311C78D6F200587B90 /* HomeTimelineCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4508301C78D6F200587B90 /* HomeTimelineCellTableViewCell.swift */; };
+		EE83BE391C8196130002DF50 /* ComposeTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83BE381C8196130002DF50 /* ComposeTweetViewController.swift */; };
+		EE83BE3D1C82AACA0002DF50 /* ProfileViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83BE3C1C82AACA0002DF50 /* ProfileViewViewController.swift */; };
+		EE83BE3F1C82C99E0002DF50 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE83BE3E1C82C99E0002DF50 /* UserProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		EE1ADBBD1C716FBD00367D5A /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		EE1ADBBF1C71852000367D5A /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TweetsViewController.swift; path = ../TweetsViewController.swift; sourceTree = "<group>"; };
 		EE4508301C78D6F200587B90 /* HomeTimelineCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTimelineCellTableViewCell.swift; sourceTree = "<group>"; };
+		EE83BE381C8196130002DF50 /* ComposeTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeTweetViewController.swift; sourceTree = "<group>"; };
+		EE83BE3C1C82AACA0002DF50 /* ProfileViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewViewController.swift; sourceTree = "<group>"; };
+		EE83BE3E1C82C99E0002DF50 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,9 @@
 			children = (
 				EE1ADBBF1C71852000367D5A /* TweetsViewController.swift */,
 				EE1ADBA31C713A3500367D5A /* ViewController.swift */,
+				EE83BE381C8196130002DF50 /* ComposeTweetViewController.swift */,
+				EE83BE3C1C82AACA0002DF50 /* ProfileViewViewController.swift */,
+				EE83BE3E1C82C99E0002DF50 /* UserProfileController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -259,10 +268,13 @@
 			files = (
 				EE1ADBBC1C716F8B00367D5A /* User.swift in Sources */,
 				EE1ADBBE1C716FBD00367D5A /* Tweet.swift in Sources */,
+				EE83BE391C8196130002DF50 /* ComposeTweetViewController.swift in Sources */,
 				EE4508311C78D6F200587B90 /* HomeTimelineCellTableViewCell.swift in Sources */,
 				EE1ADBC01C71852000367D5A /* TweetsViewController.swift in Sources */,
 				EE1ADBA41C713A3500367D5A /* ViewController.swift in Sources */,
+				EE83BE3D1C82AACA0002DF50 /* ProfileViewViewController.swift in Sources */,
 				EE1ADBB91C713E2E00367D5A /* TwitterClient.swift in Sources */,
+				EE83BE3F1C82C99E0002DF50 /* UserProfileController.swift in Sources */,
 				EE1ADBA21C713A3500367D5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

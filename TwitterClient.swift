@@ -120,4 +120,14 @@ class TwitterClient: BDBOAuth1SessionManager {
                 print("can't fav")
         }
     }
+    
+    
+    func sendTweetMessage(params: NSDictionary?){
+        POST("1.1/statuses/update.json", parameters: params, success: { (operatin: NSURLSessionDataTask, response:AnyObject?) -> Void in
+            print("The tweet was posted succesfully")
+            }) {
+                (response: NSURLSessionDataTask?, error: NSError) -> Void in
+                print("The tweet did not post succesfully")
+        }
+    }
 }

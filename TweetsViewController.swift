@@ -15,7 +15,7 @@ class TweetsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     
     
     
-    var tweets: [Tweet]?
+    var tweets: [Tweet]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,8 @@ class TweetsViewController: UIViewController,UITableViewDataSource,UITableViewDe
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
         
 
         // Do any additional setup after loading the view.
@@ -55,21 +57,25 @@ class TweetsViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("HometimelineCell", forIndexPath: indexPath) as! HomeTimelineCellTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("HometimelineCell", forIndexPath: indexPath) as? HomeTimelineCellTableViewCell
         
-        cell.tweet = tweets![indexPath.row]
+        cell?.tweet = tweets![indexPath.row]
         
-        return cell
+        return cell!
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "detailview")
+        {
+            let cell = sender as! HomeTimelineCellTableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let tweet = tweets![indexPath!.row]
+            
+            let detailViewController = segue.destinationViewController as! UserProfileController
+            detailViewController.tweets = tweet
+        }
     }
-    */
+
 
 }

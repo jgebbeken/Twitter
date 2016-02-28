@@ -29,6 +29,7 @@ class HomeTimelineCellTableViewCell: UITableViewCell {
             nameLabel.text = tweet.user!.screenname
             usernameLabel.text = "@" + tweet.user!.screenname!
             profileImageView.setImageWithURL(NSURL(string: tweet.user!.profileImageUrl!)!)
+            
             messageLabel.text = tweet.text
             favoriteCountLabel.text = String(tweet.favoriteCount!)
             retweetCountLabel.text = String(tweet.retweetCount!)
@@ -97,6 +98,8 @@ class HomeTimelineCellTableViewCell: UITableViewCell {
         favoriteCountLabel.text = ("\(tweet.favoriteCount!)")
         
     }
+
+    
     
     
 }
